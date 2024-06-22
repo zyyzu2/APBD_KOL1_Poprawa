@@ -108,6 +108,9 @@ public class TaskService : ITaskService
             newTask.IdAssignee = dto.idAssigne;
         }
 
+        await _context.Tasks.AddAsync(newTask);
+        await _context.SaveChangesAsync();
+
         return true;
 }
 }
