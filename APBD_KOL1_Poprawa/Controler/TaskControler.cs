@@ -22,5 +22,12 @@ public class TaskControler : ControllerBase
         var list = await _service.getProjectTask(projectId);
         return Ok(list);
     }
+
+    [Route("/api/task")]
+    [HttpPost]
+    public async Task<IActionResult> addTask(TaskDTO dto)
+    {
+        return Ok(await _service.addNewTask(dto));
+    }
     
 }

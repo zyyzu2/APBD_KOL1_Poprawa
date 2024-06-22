@@ -8,7 +8,7 @@ public class Task
     public DateTime createdAt { get; set; }
     public int IdProject { get; set; }
     public int IdReporter { get; set; }
-    public int IdAssignee { get; set; }
+    public int? IdAssignee { get; set; }
     
     
     public virtual Project projectNavigation { get; set; }
